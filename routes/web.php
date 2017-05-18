@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/{catchall?}', function () {
+Route::get('/{catchall?}', function ($catchall = 'api') {
     return response()->view('index');
 })->where('catchall', '(.*)');
